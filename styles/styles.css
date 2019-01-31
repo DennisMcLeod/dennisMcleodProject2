@@ -204,7 +204,11 @@ p {
   transform: scale(1.2); }
 
 nav {
-  position: absolute; }
+  position: absolute;
+  top: -100%;
+  -webkit-transition: top 350ms ease;
+  -o-transition: top 350ms ease;
+  transition: top 350ms ease; }
   @media (min-width: 900px) {
     nav {
       position: absolute;
@@ -228,11 +232,13 @@ nav {
       nav span {
         position: relative;
         top: 3px; } }
-  @media (min-width: 900px) {
-    nav ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
+  nav ul {
+    text-align: left; }
+    @media (min-width: 900px) {
+      nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
   nav li {
     width: 100%;
     padding: 5px; }
@@ -246,10 +252,20 @@ nav {
     -o-transition: transform 150ms linear;
     transition: transform 150ms linear;
     transition: transform 150ms linear, -webkit-transform 150ms linear; }
-  nav a:hover {
-    -webkit-transform: translateX(10px);
-    -ms-transform: translateX(10px);
-    transform: translateX(10px); }
+    nav a:hover a:hover {
+      -webkit-transform: translateX(10px);
+      -ms-transform: translateX(10px);
+      transform: translateX(10px); }
+
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 30px; }
+
+.showMenu {
+  top: 20px; }
 
 header {
   display: -webkit-box;
@@ -336,6 +352,10 @@ header {
 
 .founder {
   background: #f0efed; }
+  .founder img {
+    -webkit-box-shadow: 9px 9px #f8e71c;
+    box-shadow: 9px 9px #f8e71c;
+    margin-bottom: 10px; }
 
 .galleryItem {
   margin-top: 15px; }

@@ -1,6 +1,8 @@
 // NAVIGATION STYLES
 nav {
     position: absolute;
+    top: -100%;
+    transition: top 350ms ease;
     @include tablet {
         position: absolute;
         top: 0;
@@ -29,6 +31,7 @@ nav {
         @include tablet {
             display: flex;
         }
+        text-align: left;
     }
 
     li {
@@ -43,8 +46,22 @@ nav {
         display: inline-block;
         font-family: $heading;
         transition: transform 150ms linear;
-    }
-    a:hover {
+        &:hover {
+            a:hover {
         transform: translateX(10px);
+            }
+        }
     }
+    
+}
+.hamburger {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.showMenu {
+    top: 20px;
 }

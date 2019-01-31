@@ -54,6 +54,10 @@
 
 .founder {
     background: $white;
+    img {
+        box-shadow: 9px 9px $yellow;
+        margin-bottom: 10px;
+    }
 }
 
 .galleryItem {
