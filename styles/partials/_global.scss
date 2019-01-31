@@ -1,0 +1,36 @@
+// VARIABLES
+
+// COLOURS
+$black: #2c2c2c;
+$grey: #4f4f4f;
+$white: #f0efed;
+$darkGreen: #074105;
+$yellow: #f8e71c;
+$green: #0e902d;
+
+// FONTS
+$heading: 'Josefin Sans', sans-serif;
+$body: 'Roboto', sans-serif;
+
+// MIXINS
+@mixin headingFontSize($fontSize) {
+    font-family: $heading;
+    font-weight: bold;
+    font-size: $fontSize;
+}
+
+// Default Stylings
+html {
+    font-size: 62.5%
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
