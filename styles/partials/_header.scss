@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: none;
+    color: white;
+}
+    
+
+
+.index header {
+    background-image: url('../assets/contactHeader.jpg');
+    h1 {
+        @include headingFontSize(70px);
+        color: white;
+        margin: auto;
+        display: block;
+        text-align: left;
+        span {
+            display: block;
+            color: $yellow;
+        }
+    }
+    [href="index.html"] {
+        color: $yellow;
+    }
+}

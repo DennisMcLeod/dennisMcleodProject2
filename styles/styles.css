@@ -160,13 +160,189 @@ table {
   border-spacing: 0; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  min-width: 320px; }
+
+body {
+  font-size: 2.0rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; }
 
 img {
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  display: block; }
+
+p {
+  margin: 10px 0; }
 
 .wrapper {
   max-width: 1100px;
   width: 90%;
   margin: 0 auto; }
+
+.button {
+  background: #0e902d;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  color: white;
+  margin: 10px;
+  -webkit-transition: -webkit-transform 150ms ease;
+  transition: -webkit-transform 150ms ease;
+  -o-transition: transform 150ms ease;
+  transition: transform 150ms ease;
+  transition: transform 150ms ease, -webkit-transform 150ms ease; }
+
+.button:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2); }
+
+nav {
+  position: absolute; }
+  @media (min-width: 900px) {
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 15px 0 5px; } }
+  @media (min-width: 900px) {
+    nav .wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; } }
+  nav span {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    padding: 10px; }
+    @media (min-width: 900px) {
+      nav span {
+        position: relative;
+        top: 3px; } }
+  @media (min-width: 900px) {
+    nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  nav li {
+    width: 100%;
+    padding: 5px; }
+  nav a {
+    padding: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: "Josefin Sans", sans-serif;
+    -webkit-transition: -webkit-transform 150ms linear;
+    transition: -webkit-transform 150ms linear;
+    -o-transition: transform 150ms linear;
+    transition: transform 150ms linear;
+    transition: transform 150ms linear, -webkit-transform 150ms linear; }
+  nav a:hover {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px); }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: none;
+  color: white; }
+
+.index header {
+  background-image: url("../assets/contactHeader.jpg"); }
+  .index header h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: white;
+    margin: auto;
+    display: block;
+    text-align: left; }
+    .index header h1 span {
+      display: block;
+      color: #f8e71c; }
+  .index header [href="index.html"] {
+    color: #f8e71c; }
+
+.index h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 1px;
+  padding: 15px 0 5px; }
+
+.index .textItem {
+  padding: 20px; }
+
+.index .imageItem:nth-of-type(1) {
+  -webkit-box-shadow: 9px 9px #f8e71c;
+  box-shadow: 9px 9px #f8e71c; }
+
+.index .imageItem:nth-of-type(3) {
+  -webkit-box-shadow: -9px 9px #f8e71c;
+  box-shadow: -9px 9px #f8e71c; }
+
+.index section, .index article {
+  padding: 20px; }
+
+.about {
+  background: #f0efed; }
+  .about h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: 43px;
+    letter-spacing: 1.3px;
+    padding: 15px; }
+
+.community {
+  background: #f0efed; }
+  .community i {
+    font-size: 3.5rem;
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: #f8e71c;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto; }
+  .community .item {
+    padding: 20px 0; }
+
+.banner {
+  background-image: url("../assets/bannerImage.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh; }
+
+.founder {
+  background: #f0efed; }
+
+.galleryItem {
+  margin-top: 15px; }
+
+footer {
+  background: #2c2c2c;
+  color: white;
+  padding: 10px; }
+  footer p {
+    opacity: 0.5; }

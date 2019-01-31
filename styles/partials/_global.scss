@@ -2,7 +2,6 @@
 
 // COLOURS
 $black: #2c2c2c;
-$grey: #4f4f4f;
 $white: #f0efed;
 $darkGreen: #074105;
 $yellow: #f8e71c;
@@ -12,6 +11,9 @@ $green: #0e902d;
 $heading: 'Josefin Sans', sans-serif;
 $body: 'Roboto', sans-serif;
 
+// TRANSITIONS
+$defaultTrans: 150ms ease;
+
 // MIXINS
 @mixin headingFontSize($fontSize) {
     font-family: $heading;
@@ -19,18 +21,65 @@ $body: 'Roboto', sans-serif;
     font-size: $fontSize;
 }
 
-// Default Stylings
+// MEDIA QUERIES
+$tablet-width: 900px;
+$desktop-width: 1100px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// DEFUALT STYLINGS
 html {
-    font-size: 62.5%
+    font-size: 62.5%;
+    min-width: 320px;
+}
+
+body {
+    font-size: 2.0rem;
+    font-family: $body;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
 }
 
 img {
     width: 100%;
     max-width: 100%;
+    display: block;
+}
+
+p {
+    margin: 10px 0;
 }
 
 .wrapper {
     max-width: 1100px;
     width: 90%;
     margin: 0 auto;
+}
+
+.button {
+    background: $green;
+    padding: 10px 15px;
+    text-transform: capitalize;
+    color: white;
+    margin: 10px;
+    transition: transform $defaultTrans;
+}
+
+.button:hover {
+    transform: scale(1.2);
 }

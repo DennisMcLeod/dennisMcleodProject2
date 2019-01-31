@@ -1,0 +1,50 @@
+// NAVIGATION STYLES
+nav {
+    position: absolute;
+    @include tablet {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 15px 0 5px;
+        }
+    .wrapper {
+
+        @include tablet {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+    span {
+        font-family: $heading;
+        font-size: 30px;
+        padding: 10px;
+        @include tablet {
+            position: relative;
+            top: 3px;
+        }
+    }
+    ul {
+
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    li {
+        width: 100%;
+        padding: 5px;
+
+    }
+
+    a {
+        padding: 10px;
+        text-transform: uppercase;
+        display: inline-block;
+        font-family: $heading;
+        transition: transform 150ms linear;
+    }
+    a:hover {
+        transform: translateX(10px);
+    }
+}
