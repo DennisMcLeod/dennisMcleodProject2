@@ -1,3 +1,30 @@
-.contactInfo {
-    padding: 20px;
+.contact main {
+    padding: 20px 0;
+    form {
+        margin-top: 40px;
+    }
+}  
+
+.socials {
+
+    i {
+        padding: 10px;
+        color: $green;
+    }
 }
+
+.contactInfo {
+    
+    span {
+        display: block;
+        &:first-of-type {
+            font-weight: bold;
+            margin: 15px 0;
+        }
+    }
+
+}
+
+
+
+

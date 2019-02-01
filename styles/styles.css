@@ -179,7 +179,8 @@ html {
 body {
   font-size: 2.0rem;
   font-family: "Roboto", sans-serif;
-  text-align: center; }
+  text-align: center;
+  line-height: 32px; }
 
 a {
   text-decoration: none;
@@ -215,6 +216,9 @@ p {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2); }
+
+*:focus {
+  outline: 2px solid #13be3c; }
 
 nav {
   position: absolute;
@@ -297,7 +301,8 @@ header {
     color: white;
     margin: auto;
     display: block;
-    text-align: left; }
+    text-align: left;
+    line-height: 60px; }
     .index header h1 span {
       display: block;
       color: #f8e71c; }
@@ -383,8 +388,54 @@ header {
 .galleryItem {
   margin-top: 15px; }
 
-.contactInfo {
-  padding: 20px; }
+.contact main {
+  padding: 20px 0; }
+  .contact main form {
+    margin-top: 40px; }
+
+.socials i {
+  padding: 10px;
+  color: #0e902d; }
+
+.contactInfo span {
+  display: block; }
+  .contactInfo span:first-of-type {
+    font-weight: bold;
+    margin: 15px 0; }
+
+form {
+  -webkit-transition: 150ms -webkit-transform ease-out;
+  transition: 150ms -webkit-transform ease-out;
+  -o-transition: 150ms transform ease-out;
+  transition: 150ms transform ease-out;
+  transition: 150ms transform ease-out, 150ms -webkit-transform ease-out; }
+  form:focus-within {
+    -webkit-transform: scale(1.025);
+    -ms-transform: scale(1.025);
+    transform: scale(1.025); }
+
+input {
+  border: none;
+  border-bottom: 2px solid #0e902d;
+  padding: 0 10px 15px;
+  margin: 10px 0;
+  width: 100%; }
+
+textarea {
+  height: 200px;
+  border: 2px solid #0e902d;
+  padding: 20px;
+  width: 100%; }
+
+[type="submit"] {
+  background: #0e902d;
+  color: white;
+  padding: 15px 20px;
+  -webkit-transition: 150ms background-color;
+  -o-transition: 150ms background-color;
+  transition: 150ms background-color; }
+  [type="submit"]:hover {
+    background-color: #09621e; }
 
 footer {
   background: #2c2c2c;

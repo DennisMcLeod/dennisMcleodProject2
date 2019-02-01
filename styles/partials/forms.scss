@@ -1,0 +1,31 @@
+form {
+    transition: 150ms transform ease-out;
+    &:focus-within {
+    transform: scale(1.025);
+    }
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid $green;
+    padding: 0 10px 15px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+textarea {
+    height: 200px;
+    border: 2px solid $green;
+    padding: 20px;
+    width: 100%;
+}
+
+[type="submit"] {
+    background: $green;
+    color: white;
+    padding: 15px 20px;
+    transition: 150ms background-color;
+    &:hover {
+        background-color: darken($green, 10%);
+    }
+}
