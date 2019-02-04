@@ -8,36 +8,33 @@ nav {
         top: 0;
         left: 0;
         right: 0;
-        padding: 15px 0 5px;
-        }
+        padding: 0;
+    }
     .wrapper {
 
         @include tablet {
             display: flex;
-            align-items: flex-end;
         }
     }
     span {
         font-family: $heading;
-        font-size: 30px;
+        font-size: 40px;
         padding: 10px;
-        @include tablet {
-            position: relative;
-            top: 3px;
-        }
+
     }
     ul {
-
+        text-align: left;
         @include tablet {
             display: flex;
-        }
-        text-align: left;
+        } 
     }
 
     li {
         width: 100%;
-        padding: 5px;
-
+        padding-top: 2px;
+        @include tabletWide {
+            margin: 0 10px;
+        }
     }
 
     a {
@@ -60,8 +57,22 @@ nav {
     top: 20px;
     cursor: pointer;
     font-size: 30px;
+    @include tablet {
+        display: none;
+    }
 }
 
 .showMenu {
     top: 20px;
+    @include tablet {
+        top: 0;
+    }
+}
+
+// CONTACT & BLOG NAV STYLES
+
+.contact nav, .blog nav {
+    @include tablet{
+        background: $black;
+    }
 }

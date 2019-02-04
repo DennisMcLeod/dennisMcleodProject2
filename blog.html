@@ -23,7 +23,7 @@
                 <span>Planted</span>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="index.html#about">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -35,7 +35,7 @@
         <aside>
             <div class="asideImage"><img src="assets/sideBarImage.jpg" alt="a photo of the wall of a stone house with a wooden window with wood shutters">
             </div>
-            <div>
+            <div class="asideContent">
                 <div class="asideAbout">
                     <h3>About planted</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, eaque. <a href="#">Find out more.</a></p>
@@ -54,38 +54,56 @@
         <main>
             <div class="blogImage"><img src="assets/postImage.jpg" alt="Close up photo of the top of a small green plant with a white background">
             </div>
-            <section class="blogPost">
-                <div class="title">
-                    <h2>Our mission at Planted</h2>
-                    <span>Monday January 21st, 2019 by <a href="">Yousra</a></span>
-                </div>
-                <div class="content">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos ex facere, obcaecati, molestiae perspiciatis quidem ut optio quia fugiat vero animi temporibus tempore voluptate consequatur.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio natus quos minus. Corporis cum, culpa eius vitae laborum, quisquam molestias odio voluptatum eaque rem aliquid minus quis sapiente? Fugiat, quae.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, excepturi. Asperiores vero in voluptate, aliquid quasi modi accusantium alias sunt necessitatibus, earum sapiente itaque nemo harum deleniti perferendis non nulla reiciendis. Incidunt voluptatum doloribus fugiat non, molestias velit vitae iure nam debitis repellat, illum aliquam iusto fuga quos enim rerum totam adipisci aut eligendi quaerat ab consectetur eius excepturi tempore? Sit, nemo distinctio ut fuga sequi quia aut nihil corporis?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nulla molestias sit animi nisi tempore placeat ipsa at quas totam!</p>
-                </div>
-            </section>
-            <section class="comments">
-                <h3>Comments:</h3>
-                <div class="commentItem">
-                    <div class="profileImage"><img src="assets/profileImage.jpg" alt="Profile image for Jeremy">
+            <div class="innerWrapper">
+                <section class="blogPost">
+                    <div class="title">
+                        <h2>Our mission at Planted</h2>
+                        <span>Monday January 21st, 2019 by <a href="">Yousra</a></span>
                     </div>
-                    <div class="commentContent">
-                        <span>Tuesday October 9th, 2018 by <a href="#">Jeremy</a></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in asperiores quasi quia nisi recusandae sapiente repellat vel tempore, et consectetur fuga perferendis voluptatem autem deserunt nihil explicabo, ullam voluptas.</p>
-                    
+                    <div class="content">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos ex facere, obcaecati, molestiae perspiciatis quidem ut optio quia fugiat vero animi temporibus tempore voluptate consequatur.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio natus quos minus. Corporis cum, culpa eius vitae laborum, quisquam molestias odio voluptatum eaque rem aliquid minus quis sapiente? Fugiat, quae.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, excepturi. Asperiores vero in voluptate, aliquid quasi modi accusantium alias sunt necessitatibus, earum sapiente itaque nemo harum deleniti perferendis non nulla reiciendis. Incidunt voluptatum doloribus fugiat non, molestias velit vitae iure nam debitis repellat, illum aliquam iusto fuga quos enim rerum totam adipisci aut eligendi quaerat ab consectetur eius excepturi tempore? Sit, nemo distinctio ut fuga sequi quia aut nihil corporis?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nulla molestias sit animi nisi tempore placeat ipsa at quas totam!</p>
                     </div>
-                </div>
-                <div class="commentItem">
-                    <div class="profileImage"><img src="assets/profileImage2.jpg" alt="Profile image for Julia">
+                </section>
+                <section class="comments">
+                    <h3>Comments:</h3>
+                    <div class="commentItem">
+                        <div class="profileImage"><img src="assets/profileImage.jpg" alt="Profile image for Jeremy">
+                        </div>
+                        <div class="commentContent">
+                            <span>Tuesday October 9th, 2018 by <a href="#">Jeremy</a></span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in asperiores quasi quia nisi recusandae sapiente repellat vel tempore, et consectetur fuga perferendis voluptatem autem deserunt nihil explicabo, ullam voluptas.</p>
+                        
+                        </div>
                     </div>
-                    <div class="commentContent">
-                        <span>Wednesday October 10th, 2018 by <a href="#">Julia</a></span>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit ducimus, dicta quis nesciunt quo mollitia iure repudiandae suscipit qui beatae.</p>    
+                    <div class="commentItem">
+                        <div class="profileImage"><img src="assets/profileImage2.jpg" alt="Profile image for Julia">
+                        </div>
+                        <div class="commentContent">
+                            <span>Wednesday October 10th, 2018 by <a href="#">Julia</a></span>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit ducimus, dicta quis nesciunt quo mollitia iure repudiandae suscipit qui beatae.</p>    
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                <form action="" method="POST" class="messageUs">
+                    <div class="wrapper">
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <label for="name" class="visuallyhidden">Name</label>
+                
+                        <input type="email" name="email" id="email" placeholder="Email address">
+                        <label for="email" class="visuallyhidden">Email address</label>
+                
+                        <textarea name="message" id="message" placeholder="Comment"></textarea>
+                        <label for="message" class="visuallyhidden">Comment</label>
+                
+                        <input type="submit" value="Post Comment">
+                
+                    </div>
+                </form>
+            
+            </div>
         </main>
     </div>
     <footer>

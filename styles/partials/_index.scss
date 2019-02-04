@@ -30,6 +30,9 @@
 
 .community {
     background: $white;
+    @include tabletWide {
+        text-align: left;
+    }
     i {
         font-size: 3.5rem;
         padding: 5px;
@@ -41,9 +44,31 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+        @include tabletWide {
+            position: absolute;
+            left: 0;
+        }
     }
     .item {
         padding: 20px 0;
+        @include tabletWide {
+            flex-basis: 48%;
+            position: relative;
+        }
+        p, h3 {
+            @include tabletWide {
+                padding-left: 80px;
+            }
+        }
+    }
+    .item:nth-last-of-type(2n) {
+        margin-right: 2%;
+    }
+    .wrapper {
+        @include tabletWide {
+            display: flex;
+            flex-flow: row wrap;
+        }
     }
 }
 
@@ -58,10 +83,29 @@
     background: $white;
     img {
         box-shadow: 9px 9px $yellow;
-        margin-bottom: 10px;
+        margin: 0 auto 10px;
+        max-width: 400px;
     }
 }
 
+
 .galleryItem {
-    margin-top: 15px;
+    max-width: 500px;
+    margin: 15px auto 0;
+    @include tabletWide {
+        flex-basis: 48%;
+        margin: 0 1%;
+    }
+}
+
+.gallery .wrapper {
+    @include tabletWide {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
+
+.galleryItem:last-child {
+    margin: 0 auto;
+    margin-top: 2%;
 }

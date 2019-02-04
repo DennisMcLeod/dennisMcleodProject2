@@ -36,13 +36,24 @@ header {
         line-height: 92px;
         margin: auto;
         color: $yellow;
+        @include tabletWide {
+            margin: 0 0 0 5%;
+            align-self: flex-end;
+            
+        }
     }
 }
 
 .contact header {
     background-image: url('../assets/contactHeader.jpg');
+    [href="contact.html"] {
+        color: $yellow;
+    }
 }
 
 .blog header {
     background-image: url('../assets/blogHeader.jpg');
+    [href="blog.html"] {
+        color: $yellow;
+    }
 }
