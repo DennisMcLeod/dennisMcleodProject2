@@ -1,15 +1,14 @@
 header {
     display: flex;
-    min-height: 100vh;
+    min-height: 50vh;
     background-size: cover;
     background-repeat: none;
     color: white;
 }
-    
-
 
 .index header {
     background-image: url('../assets/contactHeader.jpg');
+    min-height: 75vh;
     h1 {
         font-family: $heading;
         font-size: 70px;
@@ -28,14 +27,22 @@ header {
     }
 }
 
-.contact header {
-    background-image: url('../assets/contactHeader.jpg');
+.contact header,
+.blog header {
+    min-height: 50vh;
     background-position: center center;
     h1 {
         @include headingFontSize(70px);
         line-height: 92px;
         margin: auto;
         color: $yellow;
-
     }
+}
+
+.contact header {
+    background-image: url('../assets/contactHeader.jpg');
+}
+
+.blog header {
+    background-image: url('../assets/blogHeader.jpg');
 }
