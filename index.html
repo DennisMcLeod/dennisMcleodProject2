@@ -7,10 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700|Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
         crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="styles/woah.css">
+    <!-- ANIMATION STYLESHEET BY JOE REZENDES -->
+    <link rel="stylesheet" href="styles/woah.css"> 
     <link rel="stylesheet" href="styles/styles.css">
-    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="Javascript/navbar.js"></script>
@@ -18,8 +17,9 @@
 </head>
 <body class="index">
     <header>
+        <a href="#mainContent" class="skipLink">Skip to main content.</a>
         <div class="hamburger">
-            <i class="fas fa-bars"></i>
+            <div class="bars"> </div>
         </div>
             <nav>
                 <div class="wrapper">
@@ -32,10 +32,11 @@
                     </ul>  
                 </div>
             </nav>
-            <h1 class="simpleEntrance">Planted <span>invitation</span></h1>
+            <h1 class="wowzors">Planted <span>invitation</span></h1>
             <div class="headerImage"></div>
     </header>
-    <main>
+    <main id="mainContent">
+        <!-- About Planted Section -->
         <section class="about" id="about">
             <div class="wrapper">
                 <h2>What is planted?</h2>
@@ -43,6 +44,7 @@
                 <a href="#" class="button">Find out more</a>
             </div>
         </section>
+        <!-- Four panel section with more information -->
         <section class="info">
             <div class="wrapper infoContainer">
                 <div class="item item1 imageItem">
@@ -63,6 +65,7 @@
                 </div>
             </div>
         </section>
+        <!-- Planted features section -->
         <section class="community">
             <div class="wrapper">
                 <div class="item">
@@ -91,6 +94,7 @@
     <div class="banner">
         
     </div>
+    <!-- Article about the Planted founder -->
     <article class="founder">
         <div class="wrapper">
             <div class="founderLeft"><img src="assets/founder.jpg" alt="A photo of the founder of Planted in a lavish garden">
@@ -102,6 +106,7 @@
             </div>
         </div>
     </article>
+    <!-- Planted gallery of images -->
     <section class="gallery">
         <div class="wrapper">
             <div class="galleryItem">

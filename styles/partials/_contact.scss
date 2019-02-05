@@ -17,7 +17,7 @@
     }
     form {
         margin-top: 40px;
-        box-shadow: -10px 10px 0px $yellow; 
+        @include boxShadow(false); 
         &:focus-within {
             transform: scale(1.025);   
         }

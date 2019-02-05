@@ -3,12 +3,20 @@ nav {
     position: absolute;
     top: -100%;
     transition: top 350ms ease;
+    background: rgba(0,0,0,0.5);
+    &:focus-within {
+        top: 20px;
+        @include tablet {
+            top: 0;
+        }
+    }
     @include tablet {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         padding: 10px 0 0;
+        background: none;
     }
     .wrapper {
 
@@ -43,6 +51,7 @@ nav {
         display: inline-block;
         font-family: $heading;
         transition: transform 150ms linear;
+        font-weight: bold;
         &:hover {
             transform: translateX(10px);
             @include tablet {
@@ -52,17 +61,70 @@ nav {
     }
     
 }
+/* HAMBURGER STYLES WITH TRANSITION CLASSES
+   Some help from this StackOverflow exchange https://stackoverflow.com/questions/17788990/access-the-css-after-selector-with-jquery*/
+
 .hamburger {
     position: absolute;
     right: 20px;
     top: 20px;
     cursor: pointer;
-    font-size: 30px;
+    padding: 20px 0;
     @include tablet {
         display: none;
     }
+    // Middle bar of the hamburger
+    .bars {
+        position: relative;
+        width: 35px;
+        height: 5px;
+        border-radius: 2.5px;
+        background: white;
+        transition: transform 150ms ease, bottom 150ms ease;
+    }
+    // Top and bottom hamburger bars
+    .bars::before, .bars::after {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 5px;
+        border-radius: 2.5px;
+        background: white;
+    }
+
+    // Positioning the top and bottom bar
+    .bars::before {
+        left: 0;
+        top: 10px;
+    }
+
+    .bars::after {
+        left: 0;
+        bottom: 10px;
+    }
+
+    // Hiding the lower bar and morphing the other two when the class of .changed is added through JQuery
+    .changed.bars::before {
+        display: none;
+    }
+
+    .changed.bars::after {
+        left: 0;
+        bottom: 0px;
+        transform: rotate(-90deg);
+    }
+
+    .changed.bars {
+        position: relative;
+        width: 35px;
+        height: 5px;
+        border-radius: 2.5px;
+        background: white;
+        transform: rotate(45deg);
+    }
 }
 
+// showMenu class toggled through JQuery to positon the nav when the the hamburger menu is interacted with
 .showMenu {
     top: 20px;
     @include tablet {

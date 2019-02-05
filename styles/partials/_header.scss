@@ -6,6 +6,20 @@ header {
     color: white;
 }
 
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skipLink:focus {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .index header {
     background-image: url('../assets/contactHeader.jpg');
     min-height: 90vh;

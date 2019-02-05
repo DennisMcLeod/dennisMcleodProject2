@@ -1,3 +1,5 @@
+// BLOG PAGE STYLES
+
 .blog {
     background: $white;
     h3 {
@@ -17,7 +19,7 @@
         margin: 40px 0;
         &:focus-within {
             transform: scale(1.025);
-            box-shadow: -10px 10px 0px $yellow; //Based on codepen by Eric Baily https://codepen.io/ericwbailey/pen/KQOpRM
+            @include boxShadow(false); //Based on codepen by Eric Baily https://codepen.io/ericwbailey/pen/KQOpRM
         }
     }
 
@@ -48,7 +50,7 @@
             grid-template-columns: 1fr 2fr;
             grid-template-rows: auto 1fr;
             grid-gap: 0 5%;
-            grid-template-areas:
+            grid-template-areas: 
                 'aside content'
                 'blank content';
             max-width: 100%;
@@ -139,11 +141,11 @@ aside {
 
 .blogImage {
     margin-top: 40px;
-    box-shadow: -9px 9px $yellow;
+    @include boxShadow(false);
 }
 
 .blogPost {
-    box-shadow: -9px 9px $yellow;
+    @include boxShadow(false);
     text-align: left;
     padding: 20px;
     @include tabletWide {
