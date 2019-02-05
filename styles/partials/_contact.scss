@@ -1,25 +1,84 @@
-.contact main {
-    padding: 20px 0;
+.contact {
+    background-color: $white;
+    main {
+        padding: 20px 0;
+        @include tablet {
+            padding-top: 40px;
+        }
+        & > .wrapper {
+            @include tabletWide {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-gap: 20px;
+                grid-template-areas:
+                    "socialArea formArea";
+            }
+        }
+    }
     form {
         margin-top: 40px;
+        box-shadow: -10px 10px 0px $yellow; 
+        &:focus-within {
+            transform: scale(1.025);   
+        }
+        @include tabletWide {
+            margin-top: 0;
+            grid-area: formArea;
+            position: relative;
+            top: -40%;
+        }
+    }
+    
+    .innerWrapper {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+        @include tabletWide {
+            flex-direction: column;
+            justify-content: center;
+            grid-area: socialArea;
+        }
     }
 }  
 
 .socials {
-
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 40%;
+        justify-content: center;
+    }
+    @include tabletWide {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-bottom: 20px;
+    }
     i {
         padding: 10px;
         color: $green;
+        transition: transform 250ms ease-out, box-shadow 150ms ease-out;
+        border-radius: 50%;
+        &:hover {
+            transform: scale(1.5);
+        }
     }
 }
 
 .contactInfo {
-    
+    @include tablet {
+        text-align: left;
+        flex: 1 0 60%;
+    }
     span {
         display: block;
         &:first-of-type {
             font-weight: bold;
             margin: 15px 0;
+            @include tablet {
+                margin: 0 0 15px 0;
+            }
         }
     }
 
