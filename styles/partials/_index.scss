@@ -7,17 +7,76 @@
     }
     .textItem{
         padding: 80px 20px;
+        @include desktop {
+            padding: 10% 20px 20px;
+        }
     }
-    .imageItem:nth-of-type(1) {
-        box-shadow: 9px 9px $yellow;
+
+    .button {
+        margin-top: 25px;
     }
-    .imageItem:nth-of-type(3) {
-        box-shadow: -9px 9px $yellow;
+    .infoContainer {
+        .item1 {
+
+            @include desktop {
+                grid-area: image1;
+                position: relative;
+                bottom: 10%; 
+            }
+            img {
+                @include boxShadow;
+                @include desktop {
+                    position: relative;
+                    bottom: 10%;
+                }
+            }
+        }
+        .item2 {
+            @include desktop {
+                grid-area: text1;
+                text-align: left;
+                padding-right: 15%;
+            }
+        }
+        .item3 {
+            @include desktop {
+                grid-area: image2;
+            }
+            img {
+                @include boxShadow(left);
+                position: relative;
+                top: 10%;
+            }
+        }
+        .item4 {
+            @include desktop {
+                grid-area: text2;
+                text-align: right;
+                padding-left: 15%;
+            }
+        }
+        @include desktop {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 0 10%;
+            grid-template-areas:
+                "image1 text1"
+                "text2 image2";
+            // flex-flow: row wrap;
+            // justify-content: space-between;
+            width: 100%;
+            max-width: 100%;
+        }
     }
 }
+
 .about {
     background: $white;
     padding: 80px 0;
+    @include tabletWide {
+        padding: 10% 0;
+    }
     h2 {
         @include headingFontSize(43px);
         letter-spacing: 1.3px;
@@ -26,11 +85,14 @@
     }
 }
 
+
+
 .community {
     background: $white;
-    padding: 30px;
+    padding: 80px 30px;
     @include tabletWide {
         text-align: left;
+        padding: 10% 30px;
     }
     i {
         font-size: 3.5rem;
@@ -80,14 +142,39 @@
 
 .founder {
     background: $white;
-    padding: 30px;
+    padding: 80px 30px;
     img {
-        box-shadow: 9px 9px $yellow;
-        margin: 0 auto 10px;
+        @include boxShadow;
+        margin: 0 auto 50px;
         max-width: 400px;
+    }
+    .wrapper {
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0 10%;
+            text-align: left;
+        }
+    }
+    .founderRight {
+        grid-column: 2 / 4;
     }
 }
 
+.gallery { 
+    padding: 80px;
+    .wrapper {
+        @include tabletWide {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0 2%;
+        }
+    }
+}
 
 .galleryItem {
     max-width: 500px;
@@ -95,20 +182,9 @@
     @include tabletWide {
         flex-basis: 48%;
         margin: 0 1%;
-    }
-}
-
-.gallery { 
-    padding: 30px;
-    .wrapper {
-        @include tabletWide {
-            display: flex;
-            flex-flow: row wrap;
+        &:last-child {
+            margin: 0 auto;
+            margin-top: 2%;
         }
     }
-}
-
-.galleryItem:last-child {
-    margin: 0 auto;
-    margin-top: 2%;
 }

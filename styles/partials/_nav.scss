@@ -8,7 +8,7 @@ nav {
         top: 0;
         left: 0;
         right: 0;
-        padding: 0;
+        padding: 10px 0 0;
     }
     .wrapper {
 
@@ -44,8 +44,9 @@ nav {
         font-family: $heading;
         transition: transform 150ms linear;
         &:hover {
-            a:hover {
-        transform: translateX(10px);
+            transform: translateX(10px);
+            @include tablet {
+                transform: translateY(10px);
             }
         }
     }

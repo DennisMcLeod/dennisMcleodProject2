@@ -8,7 +8,8 @@ header {
 
 .index header {
     background-image: url('../assets/contactHeader.jpg');
-    min-height: 75vh;
+    min-height: 90vh;
+    position: relative;
     h1 {
         font-family: $heading;
         font-size: 70px;
@@ -16,7 +17,17 @@ header {
         margin: auto;
         display: block;
         text-align: left;
-        line-height: 60px;
+        line-height: 1;
+        z-index: 100;
+        @include tablet {
+            font-size: 100px;
+        }
+        @include tabletWide {
+            font-size: 130px;
+        }
+        @include desktop {
+            font-size: 166px;
+        }
         span {
             display: block;
             color: $yellow;
@@ -24,6 +35,14 @@ header {
     }
     [href="index.html"] {
         color: $yellow;
+    }
+    .headerImage {
+        background-image: url('../assets/headerBox.jpg');
+        position: absolute;
+        bottom: -10%;
+        right: 0;
+        left: 55%;
+        top: 35%;
     }
 }
 
