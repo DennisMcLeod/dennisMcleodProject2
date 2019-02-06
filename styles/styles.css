@@ -159,7 +159,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.visuallyhidden:not(:focus):not(:active) {
+.visuallyHidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -173,8 +173,7 @@ table {
   overflow: hidden; }
 
 html {
-  font-size: 62.5%;
-  min-width: 320px; }
+  font-size: 62.5%; }
 
 body {
   font-size: 2.0rem;
@@ -693,6 +692,7 @@ header {
         grid-template-areas: "socialArea formArea"; } }
   .contact form {
     margin-top: 40px;
+    background: #fff;
     -webkit-box-shadow: -12px 12px #f8e71c;
     box-shadow: -12px 12px #f8e71c; }
     @media (min-width: 600px) {
@@ -963,7 +963,8 @@ aside {
 .comments {
   text-align: left; }
   .comments h3 {
-    padding: 30px; }
+    padding: 50px 0 30px;
+    font-size: 30px; }
 
 .commentItem {
   display: -webkit-box;

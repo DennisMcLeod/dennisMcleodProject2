@@ -17,6 +17,7 @@
     }
     form {
         margin-top: 40px;
+        background: #fff;
         @include boxShadow(false); 
         &:focus-within {
             transform: scale(1.025);   
