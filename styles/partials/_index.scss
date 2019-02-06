@@ -140,15 +140,15 @@
 }
 
 .banner {
-    background-image: url('../assets/bannerImage.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
+    // background-image: url('../assets/bannerImage.jpg');
+    // background-size: cover;
+    // background-position: center;
+    // height: 50vh;
 }
 
 .founder {
     background: $white;
-    padding: 80px 30px;
+    padding-bottom: 80px;
     img {
         @include boxShadow;
         margin: 0 auto 50px;
@@ -164,6 +164,16 @@
     }
     .founderRight {
         grid-column: 2 / 4;
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        background-image: url('../assets/bannerImage.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        margin-bottom: 80px;
     }
 }
 

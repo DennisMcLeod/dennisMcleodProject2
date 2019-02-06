@@ -604,15 +604,9 @@ header {
       -ms-flex-flow: row wrap;
       flex-flow: row wrap; } }
 
-.banner {
-  background-image: url("../assets/bannerImage.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 50vh; }
-
 .founder {
   background: #f0efed;
-  padding: 80px 30px; }
+  padding-bottom: 80px; }
   .founder img {
     -webkit-box-shadow: 12px 12px #f8e71c;
     box-shadow: 12px 12px #f8e71c;
@@ -634,6 +628,15 @@ header {
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-column: 2 / 4; }
+  .founder::before {
+    content: "";
+    display: block;
+    width: 100%;
+    background-image: url("../assets/bannerImage.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    margin-bottom: 80px; }
 
 .gallery {
   padding: 80px 20px; }
