@@ -30,12 +30,15 @@
  */
 @keyframes wowzors {
 
+  0% {
+    opacity: 0;
+  }
+
   1% {
-    opacity: 0%;
+    opacity: 1;
   }
 
   10% {
-    opacity: 100%;
     transform: rotate(360deg) translateX(150px) translateY(400px) rotate(-360deg) rotateY(360deg);
   }
 

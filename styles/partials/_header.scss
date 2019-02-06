@@ -24,6 +24,15 @@ header {
     background-image: url('../assets/contactHeader.jpg');
     min-height: 90vh;
     position: relative;
+    &::after {
+            content: "";
+            background-image: url('../assets/headerBox.jpg');
+            position: absolute;
+            bottom: -10%;
+            right: 0;
+            left: 55%;
+            top: 35%;  
+        }
     h1 {
         font-family: $heading;
         font-size: 70px;
@@ -33,6 +42,8 @@ header {
         text-align: left;
         line-height: 1;
         z-index: 100;
+        animation-delay: 5000ms;
+        animation-fill-mode: both;
         @include tablet {
             font-size: 100px;
         }
@@ -45,16 +56,6 @@ header {
         span {
             display: block;
             color: $yellow;
-        }
-        &::after {
-            content: "";
-            background-image: url('../assets/headerBox.jpg');
-            position: absolute;
-            bottom: -10%;
-            right: 0;
-            left: 55%;
-            top: 35%;  
-            z-index: -1;
         }
     }
     [href="index.html"] {

@@ -375,6 +375,14 @@ header {
   background-image: url("../assets/contactHeader.jpg");
   min-height: 90vh;
   position: relative; }
+  .index header::after {
+    content: "";
+    background-image: url("../assets/headerBox.jpg");
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    left: 55%;
+    top: 35%; }
   .index header h1 {
     font-family: "Josefin Sans", sans-serif;
     font-size: 70px;
@@ -383,7 +391,11 @@ header {
     display: block;
     text-align: left;
     line-height: 1;
-    z-index: 100; }
+    z-index: 100;
+    -webkit-animation-delay: 5000ms;
+    animation-delay: 5000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both; }
     @media (min-width: 600px) {
       .index header h1 {
         font-size: 100px; } }
@@ -396,15 +408,6 @@ header {
     .index header h1 span {
       display: block;
       color: #f8e71c; }
-    .index header h1::after {
-      content: "";
-      background-image: url("../assets/headerBox.jpg");
-      position: absolute;
-      bottom: -10%;
-      right: 0;
-      left: 55%;
-      top: 35%;
-      z-index: -1; }
   .index header [href="index.html"] {
     color: #f8e71c; }
 
@@ -456,51 +459,51 @@ header {
   margin-top: 25px; }
 
 @media (min-width: 1200px) {
-  .index .infoContainer .item1 {
+  .infoContainer .item1 {
     grid-area: image1;
     position: relative;
     bottom: 10%; } }
 
-.index .infoContainer .item1 img {
+.infoContainer .item1 img {
   -webkit-box-shadow: 12px 12px #f8e71c;
   box-shadow: 12px 12px #f8e71c; }
   @media (min-width: 600px) {
-    .index .infoContainer .item1 img {
+    .infoContainer .item1 img {
       -webkit-box-shadow: 20px 20px #f8e71c;
       box-shadow: 20px 20px #f8e71c; } }
   @media (min-width: 1200px) {
-    .index .infoContainer .item1 img {
+    .infoContainer .item1 img {
       position: relative;
       bottom: 10%; } }
 
 @media (min-width: 1200px) {
-  .index .infoContainer .item2 {
+  .infoContainer .item2 {
     grid-area: text1;
     text-align: left;
     padding-right: 15%; } }
 
 @media (min-width: 1200px) {
-  .index .infoContainer .item3 {
+  .infoContainer .item3 {
     grid-area: image2; } }
 
-.index .infoContainer .item3 img {
+.infoContainer .item3 img {
   -webkit-box-shadow: -12px 12px #f8e71c;
   box-shadow: -12px 12px #f8e71c;
   position: relative;
   top: 10%; }
   @media (min-width: 600px) {
-    .index .infoContainer .item3 img {
+    .infoContainer .item3 img {
       -webkit-box-shadow: -20px 20px #f8e71c;
       box-shadow: -20px 20px #f8e71c; } }
 
 @media (min-width: 1200px) {
-  .index .infoContainer .item4 {
+  .infoContainer .item4 {
     grid-area: text2;
     text-align: right;
     padding-left: 15%; } }
 
 @media (min-width: 1200px) {
-  .index .infoContainer {
+  .infoContainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 1fr 0 1fr;
@@ -511,16 +514,16 @@ header {
     grid-template-areas: "image1 text1" "text2 image2";
     width: 100%;
     max-width: 100%; }
-  .index .infoContainer .item1 {
+  .infoContainer .item1 {
     -ms-grid-row: 1;
     -ms-grid-column: 1; }
-  .index .infoContainer .item2 {
+  .infoContainer .item2 {
     -ms-grid-row: 1;
     -ms-grid-column: 3; }
-  .index .infoContainer .item3 {
+  .infoContainer .item3 {
     -ms-grid-row: 3;
     -ms-grid-column: 3; }
-  .index .infoContainer .item4 {
+  .infoContainer .item4 {
     -ms-grid-row: 3;
     -ms-grid-column: 1; } }
 

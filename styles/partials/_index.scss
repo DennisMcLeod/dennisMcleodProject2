@@ -15,59 +15,58 @@
     .button {
         margin-top: 25px;
     }
-    .infoContainer {
-        .item1 {
+}
 
-            @include desktop {
-                grid-area: image1;
-                position: relative;
-                bottom: 10%; 
-            }
-            img {
-                @include boxShadow;
-                @include desktop {
-                    position: relative;
-                    bottom: 10%;
-                }
-            }
-        }
-        .item2 {
-            @include desktop {
-                grid-area: text1;
-                text-align: left;
-                padding-right: 15%;
-            }
-        }
-        .item3 {
-            @include desktop {
-                grid-area: image2;
-            }
-            img {
-                @include boxShadow(left);
-                position: relative;
-                top: 10%;
-            }
-        }
-        .item4 {
-            @include desktop {
-                grid-area: text2;
-                text-align: right;
-                padding-left: 15%;
-            }
-        }
+.infoContainer {
+    .item1 {
+
         @include desktop {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 0 10%;
-            grid-template-areas:
-                "image1 text1"
-                "text2 image2";
-            // flex-flow: row wrap;
-            // justify-content: space-between;
-            width: 100%;
-            max-width: 100%;
+            grid-area: image1;
+            position: relative;
+            bottom: 10%; 
         }
+        img {
+            @include boxShadow;
+            @include desktop {
+                position: relative;
+                bottom: 10%;
+            }
+        }
+    }
+    .item2 {
+        @include desktop {
+            grid-area: text1;
+            text-align: left;
+            padding-right: 15%;
+        }
+    }
+    .item3 {
+        @include desktop {
+            grid-area: image2;
+        }
+        img {
+            @include boxShadow(left);
+            position: relative;
+            top: 10%;
+        }
+    }
+    .item4 {
+        @include desktop {
+            grid-area: text2;
+            text-align: right;
+            padding-left: 15%;
+        }
+    }
+    @include desktop {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0 10%;
+        grid-template-areas:
+            "image1 text1"
+            "text2 image2";
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -199,7 +198,6 @@
         }
     }
     &:hover {
-        // filter: drop-shadow(8px 8px 10px gray);
         filter: invert(100%); 
     }
     @include desktop {
