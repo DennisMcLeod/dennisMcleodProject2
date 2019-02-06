@@ -46,17 +46,19 @@ header {
             display: block;
             color: $yellow;
         }
+        &::after {
+            content: "";
+            background-image: url('../assets/headerBox.jpg');
+            position: absolute;
+            bottom: -10%;
+            right: 0;
+            left: 55%;
+            top: 35%;  
+            z-index: -1;
+        }
     }
     [href="index.html"] {
         color: $yellow;
-    }
-    .headerImage {
-        background-image: url('../assets/headerBox.jpg');
-        position: absolute;
-        bottom: -10%;
-        right: 0;
-        left: 55%;
-        top: 35%;
     }
 }
 

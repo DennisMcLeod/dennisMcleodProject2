@@ -396,15 +396,17 @@ header {
     .index header h1 span {
       display: block;
       color: #f8e71c; }
+    .index header h1::after {
+      content: "";
+      background-image: url("../assets/headerBox.jpg");
+      position: absolute;
+      bottom: -10%;
+      right: 0;
+      left: 55%;
+      top: 35%;
+      z-index: -1; }
   .index header [href="index.html"] {
     color: #f8e71c; }
-  .index header .headerImage {
-    background-image: url("../assets/headerBox.jpg");
-    position: absolute;
-    bottom: -10%;
-    right: 0;
-    left: 55%;
-    top: 35%; }
 
 .contact header,
 .blog header {
