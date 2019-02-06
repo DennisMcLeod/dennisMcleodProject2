@@ -1,3 +1,4 @@
+// HEADER STYLES
 header {
     display: flex;
     min-height: 50vh;
@@ -5,7 +6,7 @@ header {
     background-repeat: none;
     color: white;
 }
-
+// Skiplink styles taken from the notes
 .skipLink {
   position: absolute;
   left: -1000px;
@@ -20,6 +21,8 @@ header {
   transform: translateX(-50%);
 }
 
+
+// Index page header styles
 .index header {
     background-image: url('../assets/contactHeader.jpg');
     min-height: 90vh;
@@ -63,6 +66,7 @@ header {
     }
 }
 
+// Contact and blog page header styles
 .contact header,
 .blog header {
     min-height: 50vh;

@@ -458,6 +458,20 @@ header {
 .index .button {
   margin-top: 25px; }
 
+.about {
+  background: #f0efed;
+  padding: 80px 0; }
+  @media (min-width: 900px) {
+    .about {
+      padding: 10% 0; } }
+  .about h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: 43px;
+    letter-spacing: 1.3px;
+    padding: 15px;
+    line-height: 1; }
+
 @media (min-width: 1200px) {
   .infoContainer .item1 {
     grid-area: image1;
@@ -526,20 +540,6 @@ header {
   .infoContainer .item4 {
     -ms-grid-row: 3;
     -ms-grid-column: 1; } }
-
-.about {
-  background: #f0efed;
-  padding: 80px 0; }
-  @media (min-width: 900px) {
-    .about {
-      padding: 10% 0; } }
-  .about h2 {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: bold;
-    font-size: 43px;
-    letter-spacing: 1.3px;
-    padding: 15px;
-    line-height: 1; }
 
 .community {
   background: #f0efed;
@@ -664,7 +664,9 @@ header {
   transition: -webkit-filter 250ms ease-out;
   -o-transition: filter 250ms ease-out;
   transition: filter 250ms ease-out;
-  transition: filter 250ms ease-out, -webkit-filter 250ms ease-out; }
+  transition: filter 250ms ease-out, -webkit-filter 250ms ease-out;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
   @media (min-width: 900px) {
     .galleryItem {
       -ms-flex-preferred-size: 48%;
@@ -677,8 +679,8 @@ header {
       .galleryItem:last-child {
         margin: 0; } }
   .galleryItem:hover {
-    -webkit-filter: invert(100%);
-    filter: invert(100%); }
+    -webkit-filter: grayscale(0%) drop-shadow(8px 8px 10px gray);
+    filter: grayscale(0%) drop-shadow(8px 8px 10px gray); }
   @media (min-width: 1200px) {
     .galleryItem {
       margin: 0; } }

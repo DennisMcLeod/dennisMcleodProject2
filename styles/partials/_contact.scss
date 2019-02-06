@@ -1,3 +1,4 @@
+// CONTACT PAGE STYLES
 .contact {
     background-color: $white;
     main {
@@ -15,6 +16,7 @@
             }
         }
     }
+    // Contact form styles
     form {
         margin-top: 40px;
         background: #fff;
@@ -43,6 +45,7 @@
     }
 }  
 
+// Social media icon links styles
 .socials {
     @include tablet {
         display: flex;
@@ -67,6 +70,7 @@
     }
 }
 
+// Contact info styles
 .contactInfo {
     @include tablet {
         text-align: left;

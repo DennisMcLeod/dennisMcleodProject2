@@ -1,5 +1,4 @@
 // BLOG PAGE STYLES
-
 .blog {
     background: $white;
     h3 {
@@ -14,7 +13,7 @@
         padding-top: 40px;
         line-height: 1;
     }
-
+    // Blog form styles
     form {
         margin: 40px 0;
         &:focus-within {
@@ -43,7 +42,7 @@
             display: inline-block;
         } 
     }
-
+    // Adding grid on desktop view to position the aside and main
     & > .wrapper {
         @include tabletWide {
             display: grid;
@@ -74,6 +73,7 @@
     }
 }
 
+// Aside section styles
 aside {
     text-align: left;
     margin-top: 40px;
@@ -139,6 +139,7 @@ aside {
     }
 }
 
+// Blog post section styles
 .blogImage {
     margin-top: 40px;
     @include boxShadow(false);
@@ -162,6 +163,7 @@ aside {
     }
 }
 
+// Comments section styles
 .comments {
    text-align: left; 
     h3 {
