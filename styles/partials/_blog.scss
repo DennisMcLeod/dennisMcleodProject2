@@ -78,7 +78,6 @@ aside {
     text-align: left;
     margin-top: 40px;
     background: white;
-    max-width: 620px;
     @include tabletWide {
         grid-area: aside;
         margin-left: 5%;
@@ -99,7 +98,6 @@ aside {
     position: relative;
     right: 5%;
     bottom: 20px;
-    max-width: 500px;
     
 }
 
@@ -174,14 +172,21 @@ aside {
 
 .commentItem {
     display: flex;
+    flex-direction: column;
     &:first-of-type {
         margin-bottom: 75px;
+    }
+    @include tablet {
+        flex-direction: row;
     }
 }
 
 .profileImage {
     flex: 1 0 100px;
     padding: 3px;
+    width: 70%;
+    max-width: 150px;
+    padding-left: 30px;
 }
 
 .commentContent {

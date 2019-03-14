@@ -196,10 +196,13 @@ p {
 
 .wrapper {
   max-width: 1100px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 1; }
+  @media (min-width: 600px) {
+    .wrapper {
+      width: 90%; } }
 
 .button {
   background: #0e902d;
@@ -635,6 +638,7 @@ header {
     background-image: url("../assets/bannerImage.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: none;
     height: 50vh;
     margin-bottom: 80px; }
 
@@ -664,9 +668,7 @@ header {
   transition: -webkit-filter 250ms ease-out;
   -o-transition: filter 250ms ease-out;
   transition: filter 250ms ease-out;
-  transition: filter 250ms ease-out, -webkit-filter 250ms ease-out;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%); }
+  transition: filter 250ms ease-out, -webkit-filter 250ms ease-out; }
   @media (min-width: 900px) {
     .galleryItem {
       -ms-flex-preferred-size: 48%;
@@ -679,8 +681,8 @@ header {
       .galleryItem:last-child {
         margin: 0; } }
   .galleryItem:hover {
-    -webkit-filter: grayscale(0%) drop-shadow(8px 8px 10px gray);
-    filter: grayscale(0%) drop-shadow(8px 8px 10px gray); }
+    -webkit-filter: drop-shadow(8px 8px 10px gray);
+    filter: drop-shadow(8px 8px 10px gray); }
   @media (min-width: 1200px) {
     .galleryItem {
       margin: 0; } }
@@ -871,8 +873,7 @@ header {
 aside {
   text-align: left;
   margin-top: 40px;
-  background: white;
-  max-width: 620px; }
+  background: white; }
   @media (min-width: 900px) {
     aside {
       grid-area: aside;
@@ -903,8 +904,7 @@ aside {
 .asideImage {
   position: relative;
   right: 5%;
-  bottom: 20px;
-  max-width: 500px; }
+  bottom: 20px; }
 
 .asideAbout {
   margin-bottom: 40px; }
@@ -979,15 +979,28 @@ aside {
 .commentItem {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
   .commentItem:first-of-type {
     margin-bottom: 75px; }
+  @media (min-width: 600px) {
+    .commentItem {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
 
 .profileImage {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 100px;
   flex: 1 0 100px;
-  padding: 3px; }
+  padding: 3px;
+  width: 70%;
+  max-width: 150px;
+  padding-left: 30px; }
 
 .commentContent {
   padding-left: 30px; }

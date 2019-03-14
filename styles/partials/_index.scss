@@ -166,6 +166,7 @@
         background-image: url('../assets/bannerImage.jpg');
         background-size: cover;
         background-position: center;
+        background-repeat: none;
         height: 50vh;
         margin-bottom: 80px;
     }
@@ -191,7 +192,6 @@
     max-width: 500px;
     margin: 15px auto 0;
     transition: filter 250ms ease-out;
-    filter: grayscale(100%);
     @include tabletWide {
         flex-basis: 48%;
         margin: 0 1%;
@@ -204,7 +204,7 @@
         }
     }
     &:hover {
-        filter: grayscale(0%) drop-shadow(8px 8px 10px gray); 
+        filter: drop-shadow(8px 8px 10px gray); 
     }
     @include desktop {
         margin: 0;
